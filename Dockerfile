@@ -10,8 +10,9 @@ WORKDIR /app
 COPY . /app
 
 RUN pnpm install
+RUN npm install -g tsx
 
 EXPOSE 10000
 ENV PORT=10000
 
-CMD ["pnpm", "exec", "tsx", "devserver.ts"]
+CMD ["tsx", "devserver.ts"]
