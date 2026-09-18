@@ -14,4 +14,4 @@ RUN pnpm install
 EXPOSE 10000
 ENV PORT=10000
 
-CMD ["pnpm", "dev"]
+CMD ["pnpm", "exec", "tsx", "devserver.ts"]
