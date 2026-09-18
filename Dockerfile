@@ -10,7 +10,7 @@ WORKDIR /app
 COPY . /app
 
 RUN pnpm install
-RUN npm install -g tsx
+RUN pnpm add -wD tsx
 ENV NODE_OPTIONS="--import tsx"
 RUN pnpm -r build
 
