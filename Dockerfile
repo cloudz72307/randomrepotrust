@@ -10,6 +10,7 @@ WORKDIR /app
 COPY . /app
 
 RUN pnpm install
+RUN pnpm -r build
 RUN npm install -g tsx
 
 EXPOSE 10000
