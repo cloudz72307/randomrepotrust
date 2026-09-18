@@ -11,6 +11,7 @@ COPY . /app
 
 RUN pnpm install
 RUN npm install -g tsx
+ENV NODE_OPTIONS="--import tsx"
 RUN pnpm -r build
 
 EXPOSE 10000
